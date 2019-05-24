@@ -3,7 +3,7 @@ const initialState = {
   value: ""
 };
 
-const FamilyContext = React.createContext(initialState);
+const Context = React.createContext(initialState);
 
-export const FamilyProvider = FamilyContext.Provider;
-export const FamilyConsumer = FamilyContext.Consumer;
+export const Provider = Context.Provider;
+export const Consumer = Context.Consumer;

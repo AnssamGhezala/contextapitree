@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./DisplayNode.css";
-import { FamilyConsumer } from "../../context/context";
+import { Consumer } from "../../context/context";
 
 class DisplayNode extends Component {
   state = { value: "" };
@@ -12,7 +12,7 @@ class DisplayNode extends Component {
         <div className="Result">
           {/* context is the object with lastName // on it. It gets passed as */}
           {/* an argument */}
-          <FamilyConsumer>{context => <p>{context.val}</p>}</FamilyConsumer>
+          <Consumer>{context => <p>{context.val}</p>}</Consumer>
         </div>
       </div>
     );

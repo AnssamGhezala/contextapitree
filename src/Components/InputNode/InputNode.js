@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./InputNode.css";
+import { Consumer } from "../../context/context";
 
 class InputNode extends Component {
   state = { value: "" };
@@ -8,11 +9,16 @@ class InputNode extends Component {
     return (
       <div className="InputNode element">
         <header> a1 </header>
-        <input
-          type="text"
-          value={this.props.val}
-          onChange={e => this.props.onUserInput(e.target.value)}
-        />
+
+        <Consumer>
+          {({ val, onUserInput }) => (
+            <input
+              type="text"
+              value={val}
+              onChange={e => onUserInput(e.target.value)}
+            />
+          )}
+        </Consumer>
       </div>
     );
   }
