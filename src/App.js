@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Tree from "./Components/Tree/Tree";
+import MainTree from "./Components/MainTree/MainTree";
 import { Provider } from "./context/context";
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
         value={{ val: this.state.value, onUserInput: this.onUserInput }}
       >
         <div className="App">
-          <Tree title="Root" />
+          <MainTree />
         </div>
       </Provider>
     );

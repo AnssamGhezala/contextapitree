@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import "./InputNode.css";
+import "./LeftmostChild.css";
 import { Consumer } from "../../context/context";
 
-class InputNode extends Component {
+class LeftmostChild extends Component {
   state = { value: "" };
 
   render() {
     return (
-      <div className="InputNode element">
-        <header> a1 </header>
-
+      <div className="Child element">
+        <center> D </center>
         <Consumer>
           {({ val, onUserInput }) => (
-            <input
+            <textarea
               type="text"
               value={val}
               onChange={e => onUserInput(e.target.value)}
@@ -24,4 +23,4 @@ class InputNode extends Component {
   }
 }
 
-export default InputNode;
+export default LeftmostChild;
